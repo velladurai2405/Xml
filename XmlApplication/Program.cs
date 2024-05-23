@@ -55,7 +55,7 @@ class Program
                     FoodDetails details = new FoodDetails
                     {
                         Name = name,
-                        Price = decimal.Parse(price.TrimStart('$')),
+                        Price = double.Parse(price.TrimStart('$')),
                         Description = description,
                         Calories = calories
                     };
@@ -77,5 +77,6 @@ class Program
             Console.WriteLine("Calories: " + food.Details.Calories);
             Console.WriteLine();
         }
+        dinnerMenu.WriteToXml("new_dinner_menu.xml");
     }
 }
